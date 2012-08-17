@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Homework #3</title>
+</head>
+
+<body>
+
+<h1>Mindfield Game</h1>
+
+<h2><u>Minefield Problem:</u></h2>
+<p>You a robot placed on an <i>n</i> by <i>n</i> grid that contains contains 
+your starting square, a goal square, and a number of mines.&nbsp; You are also 
+given a map of the grid with your start location, the goal location, and the locations 
+of all the mines marked.&nbsp; You can only move Up, Down, Left, and Right.&nbsp; 
+You must produce a sequence of moves to get you from your starting location to 
+the goal location without moving into any mine locations and without moving off 
+the grid.&nbsp; Also, the length this sequence must 
+be minimal.&nbsp; (There must not be a shorter sequence of moves that also gets 
+you to the goal location.)</p>
+<p>&nbsp;</p>
+<h2><u>Input:</u></h2>
+<p>The input consists of one or more problems. You must stop reading input once 
+you have read the full problem description and produce a solution before you 
+continue reading input.&nbsp; Note that problems are NOT separated by blank 
+lines.</p>
+<p>Each problem consists of the following (You may want to refer to the example 
+below as your read the description.)</p>
+<ol>
+	<li>A problem begins with a number on a line by itself.&nbsp; This is <i>n</i>, 
+	or the height and width of the grid.</li>
+	<li>The next line also contains a number by itself.&nbsp; This number tells 
+	you how many rows in the grid have at least one mine.&nbsp; Call this number
+	<i>R</i>.</li>
+	<li>The next <i>R</i> lines tell you about the locations of mines in a 
+	particular row.<ol type="a">
+		<li>Each of these lines begins with the number of the row it is 
+		describing.&nbsp; In other words, if the first number is 5, this line is 
+		talking about mines in row number 5.</li>
+		<li>The line then contains one or more numbers telling you which columns 
+		in that row contain mines.</li>
+		<li>You can assume that the rows are given in increasing order 
+		(information about row 3 is given before information about row 8).</li>
+		<li>You can assume that if a row is listed, it has at least one mine.</li>
+		<li>You can assume the columns for a row are listed in increasing order 
+		(if a row has mines in columns 5 and 9, column 5 is listed before column 
+		9).</li>
+		<li>All the numbers in a line are separated from each other by a single 
+		space.</li>
+	</ol>
+	</li>
+	<li>The next line contains two numbers separated by a space.&nbsp; The first 
+	is the row of your starting location and the second is the column of your 
+	starting location.</li>
+	<li>The next line contains two numbers separated by a space.&nbsp; The first 
+	is the row of your goal location and the second is the column of your goal 
+	location.</li>
+</ol>
+<p>Please note the following about each problem description:</p>
+<ul>
+	<li>Each problem contains at least 4 lines.</li>
+	<li>The second line of a problem contains a number called R.&nbsp; The 
+	problem is guaranteed to contain a total of R+4 lines.</li>
+	<li>The row numbers run from 0 at the topmost row of the grid to n-1 at the 
+	bottommost row of the grid.</li>
+	<li>The column numbers run from 0 at the leftmost column of the grid to <i>n</i>-1 
+	at the rightmost column of the grid.</li>
+</ul>
+<h2>&nbsp;</h2>
+<h2><u>End of all Input:</u></h2>
+<p>The end of all input will be marked by a blank line at the end.&nbsp; Note this 
+this blank line would come after the goal location of the previous problem 
+(where you would normally expect to see the size of the grid for the next 
+problem.</p>
+<h2>&nbsp;</h2>
+<h2><u>Output:</u></h2>
+<p>Your output consists of a sequence of Up, Down, Left, and Right moves 
+(indicated with U, D, L, and R) on a single line.&nbsp; This sequence must be a 
+shortest path from the start location on the grid to the goal location on the 
+grid and it must avoid all mine locations.</p>
+<h2>&nbsp;</h2>
+<h2><u>Example:</u></h2>
+<p>Consider the gird below.&nbsp; The start location is colored green.&nbsp; The 
+goal location is colored blue.&nbsp; Mine locations are colored black.&nbsp; A 
+solution path is indicated by the purple arrows.</p>
+<p><img border="0" src="http://marrerosrv.cstcis.cti.depaul.edu:8080/csc421/maze.JPG" width="477" height="401"></p>
+<p>The input you would receive for this problem would be:</p>
+<pre><font size="3">10
+8
+0 8
+1 0 1 8
+2 0 5 8
+3 0 5
+4 5
+5 1 2 3 4
+7 3
+8 3
+3 2
+8 8</font>
+
+<font face="Times New Roman" size="3">The output for the solution indicated by the purple arrows would be:</font></pre>
+<pre><font size="3">RRUURRDDDDDDDRR
+</font>&nbsp;</pre>
+
+</body>
+
+</html>
